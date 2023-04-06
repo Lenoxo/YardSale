@@ -50,13 +50,13 @@ nav {
 .navbar-left ul li a {
     text-decoration: none;
     color: var(--very-light-pink);
-    border: 1px solid var(--white);
+    border: 1px solid transparent;
     padding: 8px;
+    border-radius: 8px;
 }
 .navbar-left ul li a:hover {
     color: var(--hospital-green);
     border: 1px solid var(--hospital-green);
-    border-radius: 8px;
 }
 .navbar-email {
     cursor: pointer;
@@ -108,9 +108,10 @@ nav {
     font-size: var(--sm);
     text-align: end;
 }
-.desktop-menu ul li:nth-child(1),
-.desktop-menu ul li:nth-child(2) {
+.desktop-menu ul li:nth-child(2),
+.desktop-menu ul li:nth-child(3) {
     font-weight: bold;
+    
 }
 .desktop-menu ul li a{
     text-decoration: none;
@@ -124,7 +125,7 @@ nav {
     padding-top: 20px;
 }
 .desktop-menu ul li:last-child a{
-    color: var(--hospital-green);
+    color: var(--hospital-green) !important; 
     font-size: var(--sm);
 }
 
@@ -161,14 +162,14 @@ nav {
     margin-top: 48px;
 }
 .mobile-menu ul li {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 .mobile-menu .email {
     font-size: var(--sm);
     font-weight: 300;
 }
 .mobile-menu .sign-out {
-    color: var(--hospital-green);
+    color: var(--hospital-green) !important;
     font-size: var(--sm);
 }
 
@@ -314,6 +315,7 @@ nav {
     padding-bottom: 24px;
     position: absolute;
     right: 0;
+    background-color: var(--white);
 }
 
 .product-detail > img {
@@ -373,6 +375,16 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+/* Estilos dark mode */
+.dark-mode-icon-desktop {
+    margin-bottom: 12px;
+}
+.background-dark {
+    background-color: var(--dark);
+}
+.font-white {
+    color: var(--white) !important;
 }
 
 @media (max-width: 640px) {

@@ -7,12 +7,18 @@ const asideProductShoppingCart = document.querySelector('.product-container')
 const asideProductDetail = document.querySelector('.product-detail')
 const cardsContainer = document.querySelector('.cards-container')
 const productDetailCloseIcon = document.querySelector('.product-detail-close')
+const iconDarkModeDesktop = document.querySelector('.dark-mode-icon-desktop')
+const iconDarkModeMobile = document.querySelector('.dark-mode-icon-mobile')
+const bordeElementosNavbar = document.querySelectorAll('.navbar-left ul li a')
+
 
 
 navbarEmail.addEventListener('click', toggleDesktopMenu)
 burgerMenu.addEventListener('click', toggleMobileMenu)
 iconShoppingCart.addEventListener('click', toggleAsideProductShoppingCart)
 productDetailCloseIcon.addEventListener('click', closeAsideProductDetail)
+iconDarkModeDesktop.addEventListener('click', toggleDarkMode)
+iconDarkModeMobile.addEventListener('click', toggleDarkMode)
 
 function toggleDesktopMenu () {
 
@@ -48,6 +54,26 @@ function toggleAsideProductShoppingCart () {
     if (!isAsideProductDetailClosed) {
         asideProductDetail.classList.add('inactive')
     }
+}
+function toggleDarkMode() {
+    document.body.classList.toggle('background-dark')
+    document.body.classList.toggle('font-white')
+
+    bordeElementosNavbar.forEach((element) => {
+        element.classList.toggle('border-dark')
+      })
+    const ElementosBackground = document.querySelectorAll('.desktop-menu, .mobile-menu, .order, .product-container, .product-detail');
+
+    ElementosBackground.forEach((element) => {
+        element.classList.toggle('background-dark');
+    });
+
+    const TextoElementos = document.querySelectorAll('.desktop-menu ul li a, .mobile-menu a');
+
+    TextoElementos.forEach((element) => {
+        element.classList.toggle('font-white');
+    });
+
 }
 function openProductDetailAside(){
     asideProductShoppingCart.classList.add('inactive')
