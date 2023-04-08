@@ -1,9 +1,9 @@
 # Lenoxo.github.io
 ## Como se ve
 ### Desktop
-[Gif funcionamiento desktop](https://media.giphy.com/media/FDyUuXYiW2boG8W7bn/giphy.gif)
+![Gif funcionamiento desktop](https://media.giphy.com/media/FDyUuXYiW2boG8W7bn/giphy.gif)
 ### Mobile
-[Gif funcionamiento mobile](https://media.giphy.com/media/3MYvaRj6LHYMOfoK0n/giphy.gif)
+![Gif funcionamiento mobile](https://media.giphy.com/media/3MYvaRj6LHYMOfoK0n/giphy.gif)
 ## Qué es
 - Este es un proyecto sencillo con la integración de HTML, CSS y JS para hacer la vista principal de una YardSale (Venta de garaje).
 - De forma experimental le añadí un Dark Mode, que se activa y desactiva dando click en el icono del sol en los menús (Desktop/mobile).
