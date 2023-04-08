@@ -7,6 +7,7 @@
 ## Qué es
 - Este es un proyecto sencillo con la integración de HTML, CSS y JS para hacer la vista principal de una YardSale (Venta de garaje).
 - De forma experimental le añadí un Dark Mode, que se activa y desactiva dando click en el icono del sol en los menús (Desktop/mobile).
+- [Link para que puedas interactuar de forma directa](https://Lenoxo.github.io)
 ## Organización
 ### index.html
 - Contiene la estructura básica de la vista principal.
