@@ -122,7 +122,7 @@ productList.push({
                 <p>Gloves</p>
             </div>
             <figure>
-                <img src="./assets/icons/bt_add_to_cart.svg" alt="add-to-cart">
+                <img src="../assets/icons/bt_add_to_cart.svg" alt="add-to-cart">
             </figure>
         </div>
     </div>
@@ -152,7 +152,7 @@ function renderProducts(arrayOfProducts) {
 
     const figure = document.createElement("figure");
     const imgAddToCart = document.createElement("img");
-    imgAddToCart.setAttribute("src", "./assets/icons/bt_add_to_cart.svg");
+    imgAddToCart.setAttribute("src", "../assets/icons/bt_add_to_cart.svg");
 
     // Hace append a los elementos generados
     productInfoDiv.appendChild(productPrice);
