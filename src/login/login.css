@@ -3,6 +3,7 @@
   --black: #000000;
   --very-light-pink: #c7c7c7;
   --text-input-field: #f7f7f7;
+  --error-background: #f0c6c6;
   --dark: #232830;
   --hospital-green: #ACD9B2;
   --sm: 14px;
@@ -104,8 +105,27 @@ body {
   cursor: pointer;
   font-size: var(--md);
   font-weight: bold;
+  line-height: 48px;
   margin-top: 16px;
   margin-bottom: 32px;
+}
+
+.error-message {
+  display: block;
+  background: var(--error-background);
+  color: var(--white);
+  width: 80%;
+  padding: 10px;
+  /* height: 48px; */
+  font-size: var(--md);
+  font-weight: bold;
+  text-align: center;
+  border-radius: 4px;
+}
+
+
+.inactive {
+  display: none;
 }
 
 @media (max-width: 640px) {
@@ -114,7 +134,6 @@ body {
   }
 
   .secondary-button {
-    position: fixed;
     bottom: 0;
     width: 300px;
     margin-bottom: 8px;
