@@ -1,7 +1,10 @@
+import { getUserData } from "./utils/getUserData.js";
+
 const navbarEmail = document.querySelector(".navbar-email");
 const desktopMenu = document.querySelector(".desktop-menu");
 const burgerMenu = document.querySelector(".menu");
 const mobileMenu = document.querySelector(".mobile-menu");
+const mobileEmail = document.querySelector(".mobile-email")
 const iconShoppingCart = document.querySelector(".navbar-shopping-cart");
 const asideProductShoppingCart = document.querySelector(".product-container");
 const closeShoppingCartButton = document.querySelector(
@@ -12,7 +15,7 @@ const cardsContainer = document.querySelector(".cards-container");
 const productDetailCloseIcon = document.querySelector(".product-detail-close");
 const iconDarkModeDesktop = document.querySelector(".dark-mode-icon-desktop");
 const iconDarkModeMobile = document.querySelector(".dark-mode-icon-mobile");
-const bordeElementosNavbar = document.querySelectorAll(".navbar-left ul li a");
+const elementsBorderNavbar = document.querySelectorAll(".navbar-left ul li a");
 
 navbarEmail.addEventListener("click", toggleDesktopMenu);
 burgerMenu.addEventListener("click", toggleMobileMenu);
@@ -24,6 +27,20 @@ closeShoppingCartButton.addEventListener(
 productDetailCloseIcon.addEventListener("click", closeAsideProductDetail);
 iconDarkModeDesktop.addEventListener("click", toggleDarkMode);
 iconDarkModeMobile.addEventListener("click", toggleDarkMode);
+
+// Actualización de datos acorde a localStorage
+
+const userData = await getUserData()
+
+if (!userData) {
+  window.location.href = './login/login.html'
+}
+
+navbarEmail.innerText = userData.savedEmail
+mobileEmail.innerText = userData.savedEmail
+
+
+// Funciones de toggle de clases para ocultar elementos
 
 function toggleDesktopMenu() {
   const isAsideProductClosed =
@@ -66,7 +83,7 @@ function toggleDarkMode() {
   document.body.classList.toggle("background-dark");
   document.body.classList.toggle("font-white");
 
-  bordeElementosNavbar.forEach((element) => {
+  elementsBorderNavbar.forEach((element) => {
     element.classList.toggle("border-dark");
   });
   const ElementosBackground = document.querySelectorAll(
@@ -94,6 +111,7 @@ function closeAsideProductDetail() {
 }
 
 const productList = [];
+
 productList.push({
   name: "Gloves",
   price: 120,
@@ -131,7 +149,7 @@ renderProducts(productList);
 
 function renderProducts(arrayOfProducts) {
   // Este ciclo for genera elementos HTML tomando como base los productos del arrayOfProducts
-  for (product of arrayOfProducts) {
+  for (let product of arrayOfProducts) {
     // Crea y añade clases a los elementos cuando es necesario
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");

@@ -1,3 +1,4 @@
+import { getUserData } from "../utils/getUserData.js"
 const form = document.querySelector('.form')
 const errorSpan = document.querySelector('#login-error-message')
 
@@ -5,15 +6,18 @@ form.addEventListener('submit', handleLogin)
 
 async function handleLogin(event) {
   event.preventDefault()
-  console.log('detected submit')
   const emailVal = event.target.elements.email.value
   const passwordVal = event.target.elements.password.value
 
-  const { savedEmail, savedPassword } = await getUserData()
-  const isEmailCorrect = emailVal === savedEmail
-  const isPasswordCorrect = passwordVal === savedPassword
-
   try {
+    const userData = await getUserData()
+    if (!userData) {
+      throw new Error(`You don't have an account yet, create one`)
+    }
+
+    const isEmailCorrect = emailVal === userData.savedEmail
+    const isPasswordCorrect = passwordVal === userData.savedPassword
+
     if (!isEmailCorrect) throw new Error('Check your email again')
     if (!isPasswordCorrect) throw new Error('Check your password again')
 
@@ -22,10 +26,6 @@ async function handleLogin(event) {
     renderErrorMessage(error.message)
   }
 
-}
-
-function getUserData() {
-  return JSON.parse(localStorage.getItem('user-data'))
 }
 
 function renderErrorMessage(message) {
