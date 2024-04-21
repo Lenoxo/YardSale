@@ -17,5 +17,5 @@ function handleUpdate(event) {
     savedPassword: passwordVal
   }))
 
-  return window.location.href = '/index.html'
+  return window.location.href = '../index.html'
 }
