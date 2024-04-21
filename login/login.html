@@ -1,39 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Back</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/svg"
+      href="../assets/logos/favicon_yard_sale.svg"
+    />
+    <link rel="stylesheet" type="text/css" href="./login.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome Back</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg" href="../assets/logos/favicon_yard_sale.svg">
-  <link rel="stylesheet" type="text/css" href="./login.css">
-</head>
+  <body>
+    <div class="login">
+      <span id="login-error-message" class="error-message inactive"> </span>
+      <div class="form-container">
+        <img src="../assets/logos/logo_yard_sale.svg" alt="logo" class="logo" />
+        <form action="" class="form">
+          <label for="email" class="label">Email address</label>
+          <input
+            type="text"
+            id="email"
+            placeholder="youremail@example.com"
+            class="input"
+          />
 
-<body>
-  <div class="login">
-    <span id="login-error-message" class="error-message inactive">
+          <label for="password" class="label">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="**********"
+            class="input"
+          />
 
-    </span>
-    <div class="form-container">
-      <img src="../assets/logos/logo_yard_sale.svg" alt="logo" class="logo">
-      <form action="" class="form">
-        <label for="email" class="label">Email address</label>
-        <input type="text" id="email" placeholder="youremail@example.com" class="input">
-
-        <label for="password" class="label">Password</label>
-        <input type="password" id="password" placeholder="**********" class="input">
-
-        <input type="submit" value="Log in" class="primary-button login-button">
-        <a href="">Forgot my password</a>
-        <a href="../signup/signup.html" class="secondary-button">Sign up</a>
-      </form>
+          <input
+            type="submit"
+            value="Log in"
+            class="primary-button login-button"
+          />
+          <a href="">Forgot my password</a>
+          <a href="../signup/signup.html" class="secondary-button">Sign up</a>
+        </form>
+      </div>
     </div>
-  </div>
-  <script type="module" src="./login.js"></script>
-</body>
-
+    <script type="module" src="./login.js"></script>
+  </body>
 </html>

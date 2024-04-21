@@ -3,6 +3,7 @@
 YardSale is an e-commerce project that serves as the main page for an online store. This project was developed to practice HTML and CSS layout skills, with a touch of interactivity using JavaScript. Please note that this is one of my early projects, so it might not be as refined or organized as more recent ones.
 
 ## Table of Contents
+
 - [Demo](#demo)
 - [Features](#features)
 - [Installation](#installation)
@@ -13,8 +14,11 @@ YardSale is an e-commerce project that serves as the main page for an online sto
 ### Demo
 
 #### Desktop
+
 ![Gif funcionamiento desktop](https://media.giphy.com/media/FDyUuXYiW2boG8W7bn/giphy.gif)
+
 #### Mobile
+
 ![Gif funcionamiento mobile](https://media.giphy.com/media/3MYvaRj6LHYMOfoK0n/giphy.gif)
 
 #### [View it online!](https://lenoxo.github.io/YardSale/)

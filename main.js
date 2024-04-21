@@ -4,7 +4,7 @@ const navbarEmail = document.querySelector(".navbar-email");
 const desktopMenu = document.querySelector(".desktop-menu");
 const burgerMenu = document.querySelector(".menu");
 const mobileMenu = document.querySelector(".mobile-menu");
-const mobileEmail = document.querySelector(".mobile-email")
+const mobileEmail = document.querySelector(".mobile-email");
 const iconShoppingCart = document.querySelector(".navbar-shopping-cart");
 const asideProductShoppingCart = document.querySelector(".product-container");
 const closeShoppingCartButton = document.querySelector(
@@ -30,14 +30,14 @@ iconDarkModeMobile.addEventListener("click", toggleDarkMode);
 
 // Actualización de datos acorde a localStorage
 
-const userData = getUserData()
+const userData = getUserData();
 
 if (!userData) {
-  window.location.href = './login/login.html'
+  window.location.href = "./login/login.html";
 }
 
-navbarEmail.innerText = userData.savedEmail
-mobileEmail.innerText = userData.savedEmail
+navbarEmail.innerText = userData.savedEmail;
+mobileEmail.innerText = userData.savedEmail;
 
 // Funciones de toggle de clases para ocultar elementos
 
@@ -115,19 +115,19 @@ productList.push({
   name: "Gloves",
   price: 120,
   image:
-    "https://images.pexels.com/photos/45057/pexels-photo-45057.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/45057/pexels-photo-45057.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 });
 productList.push({
   name: "Smart TV",
   price: 500,
   image:
-    "https://images.pexels.com/photos/1444416/pexels-photo-1444416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/1444416/pexels-photo-1444416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 });
 productList.push({
   name: "Generic Laptop",
   price: 780,
   image:
-    "https://images.pexels.com/photos/3992776/pexels-photo-3992776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/3992776/pexels-photo-3992776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 });
 // Este es el div que tomé de ejemplo para replicar en renderProducts:
 /*

@@ -1,13 +1,12 @@
 export function getUserData() {
-  const userData = JSON.parse(localStorage.getItem('user-data'))
+  const userData = JSON.parse(localStorage.getItem("user-data"));
 
   if (!userData) {
-    return false
+    return false;
   }
   if (!userData.isLoggedIn) {
-    return false
+    return false;
   }
 
-  return userData
+  return userData;
 }
-

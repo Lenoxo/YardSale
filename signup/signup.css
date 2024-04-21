@@ -4,7 +4,7 @@
   --very-light-pink: #c7c7c7;
   --text-input-field: #f7f7f7;
   --dark: #232830;
-  --hospital-green: #ACD9B2;
+  --hospital-green: #acd9b2;
   --sm: 14px;
   --md: 16px;
   --lg: 18px;
@@ -12,7 +12,7 @@
 
 body {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .login {
@@ -58,7 +58,7 @@ body {
   flex-direction: column;
 }
 
-.form>div {
+.form > div {
   display: flex;
   flex-direction: column;
 }
