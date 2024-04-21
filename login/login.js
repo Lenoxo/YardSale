@@ -17,10 +17,11 @@ async function handleLogin(event) {
 
     const isEmailCorrect = emailVal === userData.savedEmail
     const isPasswordCorrect = passwordVal === userData.savedPassword
-
     if (!isEmailCorrect) throw new Error('Check your email again')
     if (!isPasswordCorrect) throw new Error('Check your password again')
 
+    userData.isLoggedIn = true
+    localStorage.setItem('user-data', JSON.stringify(userData))
     return window.location.href = '../index.html'
   } catch (error) {
     renderErrorMessage(error.message)

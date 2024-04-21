@@ -30,7 +30,7 @@ iconDarkModeMobile.addEventListener("click", toggleDarkMode);
 
 // Actualización de datos acorde a localStorage
 
-const userData = await getUserData()
+const userData = getUserData()
 
 if (!userData) {
   window.location.href = './login/login.html'
@@ -38,7 +38,6 @@ if (!userData) {
 
 navbarEmail.innerText = userData.savedEmail
 mobileEmail.innerText = userData.savedEmail
-
 
 // Funciones de toggle de clases para ocultar elementos
 

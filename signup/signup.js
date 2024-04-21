@@ -14,7 +14,8 @@ function handleUpdate(event) {
   localStorage.setItem('user-data', JSON.stringify({
     savedName: nameVal,
     savedEmail: emailVal,
-    savedPassword: passwordVal
+    savedPassword: passwordVal,
+    isLoggedIn: true
   }))
 
   return window.location.href = '../index.html'
