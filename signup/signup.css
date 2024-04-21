@@ -5,6 +5,7 @@
   --text-input-field: #f7f7f7;
   --dark: #232830;
   --hospital-green: #acd9b2;
+  --error-text: #e62424;
   --sm: 14px;
   --md: 16px;
   --lg: 18px;
@@ -39,6 +40,10 @@ body {
   font-size: var(--sm);
   font-weight: bold;
   margin-bottom: 4px;
+}
+
+.input:user-invalid {
+  color: var(--error-text);
 }
 
 .input-name,

@@ -31,14 +31,17 @@
               id="name"
               class="input input-name"
               placeholder="Your name"
+              required
+              minlength="3"
             />
 
             <label for="email" class="label">Email address</label>
             <input
-              type="text"
+              type="email"
               id="email"
               placeholder="youremail@example.com"
               class="input input-email"
+              required
             />
 
             <label for="password" class="label">Password</label>
@@ -47,6 +50,9 @@
               id="password"
               placeholder="**********"
               class="input input-password"
+              required
+              minlength="5"
+              maxlength="30"
             />
           </div>
 

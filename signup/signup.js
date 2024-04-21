@@ -9,8 +9,6 @@ function handleUpdate(event) {
   const emailVal = event.target.elements.email.value;
   const passwordVal = event.target.elements.password.value;
 
-  // TODO: How to validate data from forms using just js, not react like aproaches.
-
   localStorage.setItem(
     "user-data",
     JSON.stringify({
