@@ -27,10 +27,11 @@
         <form action="" class="form">
           <label for="email" class="label">Email address</label>
           <input
-            type="text"
+            type="email"
             id="email"
             placeholder="youremail@example.com"
             class="input"
+            required
           />
 
           <label for="password" class="label">Password</label>
@@ -39,6 +40,9 @@
             id="password"
             placeholder="**********"
             class="input"
+            required
+            minlength="5"
+            maxlength="30"
           />
 
           <input

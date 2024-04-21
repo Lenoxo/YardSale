@@ -4,6 +4,7 @@
   --very-light-pink: #c7c7c7;
   --text-input-field: #f7f7f7;
   --error-background: #f0c6c6;
+  --error-text: #e62424;
   --dark: #232830;
   --hospital-green: #acd9b2;
   --sm: 14px;
@@ -66,6 +67,10 @@ body {
   font-size: var(--md);
   padding: 6px;
   margin-bottom: 12px;
+}
+
+.input:user-invalid {
+  color: var(--error-text);
 }
 
 .form {
