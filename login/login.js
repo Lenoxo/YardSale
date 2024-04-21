@@ -21,7 +21,7 @@ async function handleLogin(event) {
     if (!isEmailCorrect) throw new Error('Check your email again')
     if (!isPasswordCorrect) throw new Error('Check your password again')
 
-    return window.location.href = '/src'
+    return window.location.href = '/index.html'
   } catch (error) {
     renderErrorMessage(error.message)
   }
