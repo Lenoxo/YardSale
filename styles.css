@@ -137,12 +137,7 @@ nav {
 
 .desktop-menu ul li:last-child {
   border-top: 1px solid var(--very-light-pink);
-  padding-top: 20px;
-}
-
-.desktop-menu ul li:last-child a {
-  color: var(--hospital-green) !important;
-  font-size: var(--sm);
+  padding: 20px 0;
 }
 
 .inactive {
@@ -152,14 +147,15 @@ nav {
 /* Estilos mobile-menu */
 
 .mobile-menu {
-  z-index: 1;
   background-color: var(--white);
   position: absolute;
-  top: 60px;
+  top: 61px;
+  left: 0;
   padding: 0 24px;
   /* Esta función calc tiene 48px por el padding a los lados que tiene el div .mobile-menu */
   width: calc(100% - 48px);
-  left: 0;
+  min-height: 100vh;
+  z-index: 1;
 }
 
 .mobile-menu a {
@@ -192,11 +188,12 @@ nav {
   font-weight: 300;
 }
 
-.mobile-menu .sign-out {
+.sign-out {
   color: var(--hospital-green) !important;
   background-color: transparent;
   cursor: pointer;
   border: none;
+  padding: 0;
   font-size: var(--sm);
 }
 
