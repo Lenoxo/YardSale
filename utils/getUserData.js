@@ -4,9 +4,6 @@ export function getUserData() {
   if (!userData) {
     return false;
   }
-  if (!userData.isLoggedIn) {
-    return false;
-  }
 
   return userData;
 }

@@ -152,6 +152,7 @@ nav {
 /* Estilos mobile-menu */
 
 .mobile-menu {
+  z-index: 1;
   background-color: var(--white);
   position: absolute;
   top: 60px;
@@ -193,6 +194,9 @@ nav {
 
 .mobile-menu .sign-out {
   color: var(--hospital-green) !important;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
   font-size: var(--sm);
 }
 
@@ -424,6 +428,7 @@ nav {
 /* Detalles del producto (product-detail) */
 
 .product-detail {
+  z-index: 1;
   width: 360px;
   padding-bottom: 24px;
   position: absolute;
@@ -534,6 +539,7 @@ nav {
 
   .product-container {
     width: 100%;
+    z-index: 1;
     border-radius: 0px;
     border: none;
   }

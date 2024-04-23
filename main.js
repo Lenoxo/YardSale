@@ -16,6 +16,7 @@ const productDetailCloseIcon = document.querySelector(".product-detail-close");
 const iconDarkModeDesktop = document.querySelector(".dark-mode-icon-desktop");
 const iconDarkModeMobile = document.querySelector(".dark-mode-icon-mobile");
 const elementsBorderNavbar = document.querySelectorAll(".navbar-left ul li a");
+const signoutButtons = document.querySelectorAll(".sign-out");
 
 navbarEmail.addEventListener("click", toggleDesktopMenu);
 burgerMenu.addEventListener("click", toggleMobileMenu);
@@ -32,12 +33,24 @@ iconDarkModeMobile.addEventListener("click", toggleDarkMode);
 
 const userData = getUserData();
 
-if (!userData) {
+if (!userData || !userData.isLoggedIn) {
   window.location.href = "./login/login.html";
 }
 
 navbarEmail.innerText = userData.savedEmail;
 mobileEmail.innerText = userData.savedEmail;
+
+// Cierre de sesion
+
+signoutButtons.forEach((button) => {
+  button.addEventListener("click", handleSignout);
+});
+
+function handleSignout() {
+  userData.isLoggedIn = false;
+  localStorage.setItem("user-data", JSON.stringify(userData));
+  window.location.href = "./login/login.html";
+}
 
 // Funciones de toggle de clases para ocultar elementos
 

@@ -10,7 +10,7 @@ async function handleLogin(event) {
   const passwordVal = event.target.elements.password.value;
 
   try {
-    const userData = await getUserData();
+    const userData = getUserData();
     if (!userData) {
       throw new Error(`You don't have an account yet, create one`);
     }
